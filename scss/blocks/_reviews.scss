@@ -1,0 +1,102 @@
+@use '../variables/variables' as *;
+@use '../mixins/media' as *;
+
+.reviews {
+
+    &__title {
+        padding: 0 0 20px 0;
+
+        @include media($md) {
+            text-align: center;
+        
+        }
+
+    }
+
+    &__text {
+        width: 400px;
+        
+        @include media($md) {
+            margin: 0 auto;
+            text-align: center;
+    
+        }
+
+    }
+
+    &__flex {
+        flex-wrap: wrap;
+        align-items: baseline;
+        padding: 30px 0 100px 0;
+        justify-content: space-between;
+        
+        @include media($md) {
+            flex-direction: column;
+            align-items: center;
+
+        }
+
+    }
+
+    &__box {
+        max-width: 370px;
+        padding: 30px 40px 30px 40px;
+        display: flex;
+        flex-direction: column;
+        flex: 0 1 33%;
+
+        @include media($md) {
+            max-width: 100%;
+        
+        }
+
+        &-desc {
+            font-weight: 400;
+            font-size: 16px;
+            padding-bottom: 25px;
+    
+        }
+    
+        &-author {
+            font-family:$font-secondary;
+            font-style: italic;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 20px;
+            letter-spacing: 0.08em;
+            color:$primary;
+            margin-top: auto;
+    
+        }
+
+    }
+
+    &__bg-first {
+        background: url(../img/jpg/bg-first.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 340px;
+        
+    }
+
+    &__bg-second {
+        background: url(../img/jpg/bg-second.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 340px;
+        margin-top: 25px;
+
+    }
+
+    &__bg-third {
+        background: url(../img/jpg/bg-third.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-height: 340px;
+        margin-top: 25px;
+
+    }
+
+}
+
+

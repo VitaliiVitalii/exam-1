@@ -1,0 +1,105 @@
+@use '../variables/variables' as *;
+@use '../mixins/media' as *;
+
+.main {
+    position: relative;
+    z-index: $z-main;
+    width: 100vw;
+    
+    &__statistics {
+        position: relative;
+        padding-top: 150px;
+
+    }
+
+    &__box {
+        padding-top: 120px;
+        flex-wrap: wrap;
+        align-items: baseline;
+
+    }
+    
+    &__quote {
+        background-image: url(../img/bg/quote-background.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100%;
+        padding: 100px 0 100px 160px;
+        margin: 25px 0 0 0;
+
+        @include media($md) {
+            padding: 55px 0 100px 160px;
+
+        }
+
+        @include media($mob) {
+            padding: 55px 0 100px 100px;
+
+        }
+
+        @include media($sm) {
+            padding: 55px 0 35px 35px;
+
+        }
+        
+    }
+
+    &__video {
+        padding: 125px 105px 0 105px;
+        width: 100%;
+
+        @include media($lg) {
+            padding: 100px 60px 0 60px;
+
+        }
+
+        @include media($md) {
+            padding: 60px 50px 0 50px;
+
+        }
+
+        @include media($mob) {
+            text-align: center;
+            padding: 30px 15px 0 15px;
+
+        }
+
+    }
+
+    &__promises {
+        position: relative;
+        padding-top: 120px;
+
+        @include media($md) {
+            flex-direction: column;
+
+        }
+
+        
+    }
+
+    &__reviews {
+        padding: 115px 0 0 0;
+        border-bottom: 1px solid #515773;
+
+    }
+
+    &__contact {
+        display: flex;
+        justify-content: space-between;
+        padding: 60px 0 100px 0;
+        border-bottom: 1px solid #515773;
+        
+        @include media($md) {
+            flex-wrap: wrap;
+            justify-content: center;
+    
+        }
+
+    }
+
+}
+
+
+
+

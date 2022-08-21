@@ -1,0 +1,96 @@
+@use '../variables/variables' as *;
+@use '../mixins/media' as *;
+
+@include media-reverse($mob_max) {
+    .nav {
+        
+        &__list {
+            height: 100%;
+            align-items: center;
+            gap: 30px;
+    
+            @include media($md) {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                padding: 0 60px 0 0;
+        
+            }
+    
+        }
+    
+        &__link {
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.08em;
+        color: $primary;
+        position: relative;
+
+            &:after {
+                content: '';
+                position: absolute;
+                width: 0%;
+                height: 3px;
+                left: 0;
+                top: 20px;
+                background: linear-gradient(96.73deg, #53F3CD 6.73%, rgba(83, 243, 205, 0) 116.9%);
+                opacity: 0.3;
+                transition: width 0.4s ease-in-out;
+        
+            }
+
+            &:hover {
+                &:after {
+                    width: 100%;
+
+                }
+
+            }
+    
+        }
+    
+    }
+
+}
+
+@include media($mob) {
+    .nav {
+        
+        &__list {
+            display: block;
+            position: absolute;
+            visibility: hidden;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            margin: 0;
+            padding: 50px 0;
+            list-style: none;
+            text-align: center;
+            background-color: $primary;
+            box-shadow: 1px 0px 6px rgba(0, 0, 0, .2);
+            transition: 0.3s linear;
+            
+        }
+    
+        &__link {
+            display: block;
+            padding: 15px 24px;
+            color: $black-default;
+            font-family: $font-primary;
+            font-size: 24px;
+            font-weight: 600;
+            text-decoration: none;
+            
+        }
+
+        .nav__link:hover {
+            background-color: $secondary;
+            opacity: 0.5;
+            color: $black-default;
+            
+        }
+
+    }
+
+}

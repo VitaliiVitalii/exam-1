@@ -1,0 +1,79 @@
+@use '../variables/variables' as *;
+@use '../mixins/media' as *;
+
+.promises {
+
+    &__box {
+
+        position: absolute;
+        bottom: 45px;
+        right: 0px;
+        background: $bg;
+        opacity: 0.9;
+        padding: 80px 0px 80px 70px;
+        flex-wrap: wrap;
+        max-width: 770px;
+        max-height: 450px;
+        row-gap: 5vh;
+
+        @include media($md) {
+            padding: 40px 40px 80px 40px;
+            justify-content: center;
+            row-gap: 3vh;
+            bottom: 135px;
+            column-gap: 2%;
+
+        }
+
+        @include media($mob) {
+            padding: 5px 40px 0px 40px;
+            row-gap: 2vh;
+
+        }
+
+        @include media($sm) {
+            padding: 5px 40px 0px 40px;
+            
+        }
+
+    }
+
+    &__box-item {
+        @include media($md) {
+            text-align: center;
+        
+        }
+        
+    }
+
+    &__box-item-title {
+        font-size: 24px;
+        padding: 0 0 15px 0;
+
+    }
+
+    &__box-item-text {
+        max-width: 300px;
+
+    }
+
+    &__box-item-btn {
+        width: 100%;
+
+    }
+    
+}
+
+.btn-inner {
+    border: 1px solid #515773;
+    padding: 35px 85px 35px 90px;
+    width: 300px;
+    height: 90px;
+
+    &:hover  {
+        border: 1px solid #02E0AB;
+
+    }
+    
+}
+

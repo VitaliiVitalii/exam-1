@@ -1,0 +1,73 @@
+@use '../variables/variables' as *;
+@use '../mixins/media' as *;
+
+body {
+    background-color: $bg;
+    font-size: $font-size-default;
+    font-family: $font-primary;
+    overflow-x: hidden;
+    
+}
+
+.conteiner {
+    width: 100%;
+    max-width:1440px;
+    margin: 0 auto;
+    padding: 0 135px;
+
+    @include media($lg) {
+        padding: 0 $lg-padding;
+
+    }
+
+    @include media($md) {
+        padding: 0 $md-padding;
+
+    }
+
+    @include media($sm) {
+        padding: 0 $sm-padding;
+
+    }
+
+}
+
+.flex {
+    display: flex;
+    
+    @include media-reverse($mob_max) {
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    
+}
+
+.grid {
+    display: grid;
+    
+}
+
+.title {
+    font-family:$font-secondary;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 48px;
+    color:$primary;
+
+}
+
+.selection {
+    font-style: italic;
+    color: $secondary-light;
+
+}
+
+.text {
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 26px;
+    color:$primary;
+    opacity: 0.8;
+
+}
